@@ -1,0 +1,83 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+// Passcode
+
+.passcode-area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.passcode-area > input {
+  background-color: #fff;
+  border: 2px solid #d6d6d6;
+  border-radius: 4px;
+  padding: 0;
+  margin: 25px 6px 0;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.29;
+  text-transform: uppercase;
+  background-clip: padding-box;
+
+  &:focus {
+    -webkit-appearance: none;
+    border: 2px solid skyblue;
+    outline: 0;
+    box-shadow: 0px 0px 3px rgba(131, 192, 253, 0.5);
+  }
+}
+
+// Overlay
+
+.overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(#222, 0.75);
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-top-color: #fff;
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes spin {
+100% {
+  transform: rotate(360deg);
+}
+}
+
+.spinner__title {
+  color: #fff;
+}
